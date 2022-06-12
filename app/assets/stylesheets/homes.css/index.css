@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(196, 194, 194);
+}
+
+#welcome {
+  display: flex;
+  background-color: white;
+  height: 500pt;
+}
+
+#welcome-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+#carousel {
+  margin: 5pt;
+}
+#carousel_image {
+  width: 100%; 
+  height: 900px;
+}
+
+nav {
+  height: 10em;
+  background-color: rgb(22, 247, 60);
+  margin: 5pt;
+}
+#footer {
+  padding: 3em;
+  background-color: rgb(233, 138, 138);
+  height: 20em;
+  border-top-right-radius: 50pt;
+  border-top-left-radius: 50pt;
+  margin-top: 5pt;
+}
