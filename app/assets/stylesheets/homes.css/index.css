@@ -1,37 +1,90 @@
-body {
-  background-color: rgb(196, 194, 194);
-}
 
-#welcome {
-  display: flex;
-  background-color: white;
-  height: 500pt;
-}
-
-#welcome-image {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-}
-
-#carousel {
-  margin: 5pt;
-}
 #carousel_image {
   width: 100%; 
   height: 900px;
+  opacity: 50%;
 }
 
 nav {
-  height: 10em;
-  background-color: rgb(22, 247, 60);
-  margin: 5pt;
+  height: 5em;
+  background-color: rgb(248, 250, 252);
 }
+
+.link {
+  text-decoration: none;
+}
+
+.overlay1 {
+  position:absolute;
+  color: black;
+  z-index:12;
+  top:40%;
+  width:40%;
+  padding-left: 5%;
+  text-align:left;
+}
+.overlay2 { 
+  color:rgb(56, 58, 57);
+  position:absolute;
+  z-index:12;
+  top:80%;
+  width:35%;
+  padding-left: 5%;
+  text-align:left;
+}
+
+.overlay2 p {
+  text-align: justify;
+}
+
+#overlay_div {
+  display: flex;
+}
+
+#overlay_div1 {
+  height: 40px;
+  width: 150px;
+  margin-right: 20px;
+  background-color: blue;
+  border-style: solid;
+  border-color: blue;
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+
+#overlay_div2 {
+  height: 40px;
+  width: 150px;
+  margin-right: 20px;
+  background-color: white;
+  border-style: solid;
+  border-color: blue;
+  text-align: center;
+  padding: 5px;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 30px;
+  margin: 0px 150px 0px 150px;
+  justify-content: space-between;
+  align-content: end;
+ 
+}
+
+.grid_container div {
+  background-color: white;
+  height: 90px;
+  width: 350px; 
+  text-align: center;
+  padding-top: 40px;
+}
+
 #footer {
-  padding: 3em;
-  background-color: rgb(233, 138, 138);
-  height: 20em;
-  border-top-right-radius: 50pt;
-  border-top-left-radius: 50pt;
-  margin-top: 5pt;
+  display: grid;
+  background-color: rgb(46, 16, 214);
+  height: 10em;
+  padding: 0px;
 }
