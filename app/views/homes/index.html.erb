@@ -1,106 +1,76 @@
-<nav class="navbar navbar-expand-sm">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Home</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Health Information</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Events</a>
-                        </li>  
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Deparments</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">First Department</a></li>
-                                <li><a class="dropdown-item" href="#">Second Department</a></li>
-                                <li><a class="dropdown-item" href="#">Third Department</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="d-flex">
-                    <%= link_to "Sign-Up", new_user_registration_path %>
-                </div>
-            </div>
-        </nav>
-        <% if current_user %>
-          <p>welcome <%= current_user.first_name %></p>
-        <% end %>
-        <div id="carousel" class="container-fliud bg-secondary">
-            <div style="width: 100%;">
-                <div id="fortune1" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#fortune1" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#fortune1" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#fortune1" data-bs-slide-to="2"></button>
-                        <button type="button" data-bs-target="#fortune1" data-bs-slide-to="3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <%= image_tag "doctor2.jpg", class: "d-block", id: "carousel_image" %>
-                            <div class="carousel-caption">
-                                <h2 class="text-primary">Our Doctors</h2>
-                                <p class="text-warning">First picture</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <%= image_tag "doctor3.jpg", class: "d-block", id: "carousel_image" %>
-                            <div class="carousel-caption">
-                                <h2 class="text-primary">Our Doctors</h2>
-                                <p class="text-warning">Second picture</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <%= image_tag "doctor4.jpg", class: "d-block", id: "carousel_image" %>
-                            <div class="carousel-caption">
-                                <h2 class="text-primary">Our Doctors</h2>
-                                <p class="text-warning">Third picture</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <%= image_tag "doctor5.jpg", class: "d-block", id: "carousel_image" %>
-                            <div class="carousel-caption">
-                                <h2 class="text-primary">Our Doctors</h2>
-                                <p class="text-warning">Fourth picture</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#fortune1" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#fortune1" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                </div>
-            </div>
-        </div>
 
-        <div id="welcome">
-            <div style="width: 50%; height: 100%;">
-                <h2>Welcome to our Hospital's appointment booking site</h2>
-                <%= link_to "sign_up", new_user_registration_path, class: "btn btn-primary" %>
+<% if current_user %>
+    <p>welcome <%= current_user.first_name %></p>
+<% end %>
+
+<div class="overlay1">
+    <h1>Welcome to our Hospital's appointment booking site</h1><br/>
+    </div>
+</div>
+<div class="overlay2">
+    <h3>Making Healthcare Better Together.</h3><br/>
+    <p>From our network of medical professionals to our state-of-the-art equipment, we offer only the best laboratory services. With more than 5,000 tests on offer, Our hospital has the largest, most comprehensive test offering in Africa. We are able to support our doctors and our patients in ways not possible before. Together, we are building a stronger healthcare system in Nigeria and you are part of the change.</p>
+    <div  id="overlay_div">
+        <div id="overlay_div1">View Department</div>
+        <div id="overlay_div2">
+            <%= link_to "Sign-Up", new_user_registration_path, class: "link" %>
+        </div>
+    </div>
+</div>
+<div id="carousel" class="container-fliud bg-secondary">
+    <div style="width: 100%;">
+        <div id="fortune1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#fortune1" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#fortune1" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#fortune1" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#fortune1" data-bs-slide-to="3"></button>
             </div>
-            <div style="width: 50%; height: 100%;">
-                <%= image_tag "doctor6.jpg", id: "welcome-image" %>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <%= image_tag "doctor2.jpg", class: "d-block", id: "carousel_image" %>
+                    <div class="carousel-caption">
+                        <h2 class="text-primary">Our Doctors</h2>
+                        <p class="text-dark">Dr. Smith</p>
+                    </div>
                 </div>
+                <div class="carousel-item">
+                    <%= image_tag "doctor3.jpg", class: "d-block", id: "carousel_image" %>
+                    <div class="carousel-caption">
+                        <h2 class="text-primary">Our Doctors</h2>
+                        <p class="text-primary">Dr. Judith</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <%= image_tag "doctor4.jpg", class: "d-block", id: "carousel_image" %>
+                    <div class="carousel-caption">
+                        <h2 class="text-primary">Our Doctors</h2>
+                        <p class="text-primary">Dr. Henry</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <%= image_tag "doctor5.jpg", class: "d-block", id: "carousel_image" %>
+                    <div class="carousel-caption">
+                        <h2 class="text-primary">Our Doctors</h2>
+                        <p class="text-primary">Dr. Everlin</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#fortune1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#fortune1" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-        <div id="footer" class="container-fluid">
-            <ul type="none">
-                <li><h2>Explore</h2></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Departments</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </div>
+    </div>
+</div>
+
+<div id="footer" class="container-fluid">
+    <div class="grid_container">
+        <div><b>Primary Care</b></div>
+        <div><b>Emergency care</b></div>
+        <div><b>Online Appointment</b></div>
+    </div>
+</div>
 
