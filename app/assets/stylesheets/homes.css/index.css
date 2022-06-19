@@ -5,9 +5,18 @@
   opacity: 50%;
 }
 
-nav {
-  height: 5em;
-  background-color: rgb(248, 250, 252);
+.nav_bar {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: rgb(86, 86, 158);
+  height: 4em;
+  align-content: center;
+}
+
+.nav_bar_div {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+
 }
 
 .link {
@@ -31,6 +40,7 @@ nav {
   width:35%;
   padding-left: 5%;
   text-align:left;
+  color: white;
 }
 
 .overlay2 p {
@@ -68,7 +78,8 @@ nav {
   display: grid;
   grid-template-columns: auto auto auto;
   column-gap: 30px;
-  margin: 0px 150px 0px 150px;
+  height: auto;
+  padding: 0px 118px 0px 118px;
   justify-content: space-between;
   align-content: end;
  
@@ -76,15 +87,26 @@ nav {
 
 .grid_container div {
   background-color: white;
-  height: 90px;
+  height: auto;
   width: 350px; 
   text-align: center;
-  padding-top: 40px;
+  
+}
+
+.footer_div_links {
+  height: 40px;
+  width: 150px;
+  background-color: blue;
+  border-style: solid;
+  border-color: blue;
+  text-align: center;
+  color: white;
+  padding: 5px;
 }
 
 #footer {
   display: grid;
   background-color: rgb(46, 16, 214);
-  height: 10em;
+  height: 30em;
   padding: 0px;
 }

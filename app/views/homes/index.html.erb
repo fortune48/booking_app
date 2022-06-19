@@ -3,21 +3,25 @@
     <p>welcome <%= current_user.first_name %></p>
 <% end %>
 
-<div class="overlay1">
-    <h1>Welcome to our Hospital's appointment booking site</h1><br/>
-    </div>
-</div>
-<div class="overlay2">
-    <h3>Making Healthcare Better Together.</h3><br/>
-    <p>From our network of medical professionals to our state-of-the-art equipment, we offer only the best laboratory services. With more than 5,000 tests on offer, Our hospital has the largest, most comprehensive test offering in Africa. We are able to support our doctors and our patients in ways not possible before. Together, we are building a stronger healthcare system in Nigeria and you are part of the change.</p>
-    <div  id="overlay_div">
-        <div id="overlay_div1">View Department</div>
-        <div id="overlay_div2">
-            <%= link_to "Sign-Up", new_user_registration_path, class: "link" %>
+
+<div id="carousel" class="container-fliud-sm bg-secondary">
+
+    <div class="container-fluid-sm">
+        <div class="overlay1">
+            <h1>Welcome to our Hospital's appointment booking site</h1><br/>
+        </div>
+        <div class="overlay2">
+            <h3>Making Healthcare Better Together.</h3><br/>
+            <p>From our network of medical professionals to our state-of-the-art equipment, we offer only the best laboratory services. With more than 5,000 tests on offer, Our hospital has the largest, most comprehensive test offering in Africa. We are able to support our doctors and our patients in ways not possible before. Together, we are building a stronger healthcare system in Nigeria and you are part of the change.</p>
+            <div  id="overlay_div">
+                <div id="overlay_div1">View Department</div>
+                <div id="overlay_div2">
+                    <%= link_to "Sign-Up", new_user_registration_path, class: "link" %>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div id="carousel" class="container-fliud bg-secondary">
+
     <div style="width: 100%;">
         <div id="fortune1" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -66,11 +70,24 @@
     </div>
 </div>
 
-<div id="footer" class="container-fluid">
+<div id="footer" class="container-fluid-sm">
     <div class="grid_container">
-        <div><b>Primary Care</b></div>
-        <div><b>Emergency care</b></div>
-        <div><b>Online Appointment</b></div>
+        <div>
+            <p><b>Primary Care</b><br></p>
+            <p>Providing wider coverage of health care.</p><br>
+            <div id="overlay_div1">View Department</div>
+        </div>
+        <div>
+            <p><b>Emergency care</b> <br></p> 
+            <p>If you need a doctor urgently outside our opening ours, call our emergency number for emergency service.</p><br>
+            <div id="overlay_div1">View Department</div>
+            
+        </div>
+        <div>
+            <p><b>Online Appointment</b> <br></p>
+            <p>Complete the form to book an appointment with us today.</p><br>
+            <div id="overlay_div1">View Department</div>
+        </div>
     </div>
 </div>
 
