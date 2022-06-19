@@ -1,0 +1,6 @@
+<%= form_for @appointment do |f| %>
+  <%= f.datetime_field :fixed_date %><br>
+  <%= f.text_field :description, type: :text %><br>
+  <%= f.collection_select(:user_ids, User.doctors, :id, :full_name, prompt: true) %><br>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
