@@ -1,93 +1,46 @@
 
+<div class="container-fluid-sm">
+
+<div id="carousel" class="container-fliud-sm bg-secondary">
 <% if current_user %>
     <p>welcome <%= current_user.first_name %></p>
 <% end %>
-
-
-<div id="carousel" class="container-fliud-sm bg-secondary">
-
-    <div class="container-fluid-sm">
-        <div class="overlay1">
-            <h1>Welcome to our Hospital's appointment booking site</h1><br/>
-        </div>
-        <div class="overlay2">
-            <h3>Making Healthcare Better Together.</h3><br/>
-            <p>From our network of medical professionals to our state-of-the-art equipment, we offer only the best laboratory services. With more than 5,000 tests on offer, Our hospital has the largest, most comprehensive test offering in Africa. We are able to support our doctors and our patients in ways not possible before. Together, we are building a stronger healthcare system in Nigeria and you are part of the change.</p>
-            <div  id="overlay_div">
-                <div id="overlay_div1">View Department</div>
-                <div id="overlay_div2">
-                    <%= link_to "Sign-Up", new_user_registration_path, class: "link" %>
-                </div>
+    <div id="overlay">
+    <div id="overlay1" class="container-fliud-sm row">
+        <h1>Welcome to our Hospital's appointment booking site</h1><br/>
+    </div>
+    <div id="overlay2" class="container-fliud-sm row">
+        <h3>Making Healthcare Better Together.</h3><br/>
+        <p>From our network of medical professionals to our state-of-the-art equipment, we offer only the best laboratory services. With more than 5,000 tests on offer, Our hospital has the largest, most comprehensive test offering in Africa. We are able to support our doctors and our patients in ways not possible before. Together, we are building a stronger healthcare system in Nigeria and you are part of the change.</p>
+        <div  id="overlay2_div" class="row">
+            <div id="overlay2_div1" class="col-sm">View Department</div>
+            <div id="overlay2_div2" class="col-sm">
+                <%= link_to "Sign-Up", new_user_registration_path, class: "link" %>
             </div>
         </div>
     </div>
+    </div>
 
-    <div style="width: 100%;">
-        <div id="fortune1" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#fortune1" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#fortune1" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#fortune1" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#fortune1" data-bs-slide-to="3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <%= image_tag "doctor2.jpg", class: "d-block", id: "carousel_image" %>
-                    <div class="carousel-caption">
-                        <h2 class="text-primary">Our Doctors</h2>
-                        <p class="text-dark">Dr. Smith</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <%= image_tag "doctor3.jpg", class: "d-block", id: "carousel_image" %>
-                    <div class="carousel-caption">
-                        <h2 class="text-primary">Our Doctors</h2>
-                        <p class="text-primary">Dr. Judith</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <%= image_tag "doctor4.jpg", class: "d-block", id: "carousel_image" %>
-                    <div class="carousel-caption">
-                        <h2 class="text-primary">Our Doctors</h2>
-                        <p class="text-primary">Dr. Henry</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <%= image_tag "doctor5.jpg", class: "d-block", id: "carousel_image" %>
-                    <div class="carousel-caption">
-                        <h2 class="text-primary">Our Doctors</h2>
-                        <p class="text-primary">Dr. Everlin</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#fortune1" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#fortune1" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
+</div>
+
+<div id="footer" class="container-fluid-sm row">
+    <div class="col-sm-4 p-3 bg-white text-dark">
+        <p><b>Primary Care</b><br></p>
+        <p>Providing wider coverage of health care.</p><br>
+    </div>
+    <div class="col-sm-4 p-3 bg-white text-dark">
+        <p><b>Emergency care</b> <br></p> 
+        <p>If you need a doctor urgently outside our opening ours, call our emergency number for emergency service.</p><br>
+    </div>
+    <div class="col-sm-4 p-3 bg-white text-dark">
+        <p><b>Online Appointment</b> <br></p>
+        <p>Complete the form to book an appointment with us today.</p><br>
     </div>
 </div>
 
-<div id="footer" class="container-fluid-sm">
-    <div class="grid_container">
-        <div>
-            <p><b>Primary Care</b><br></p>
-            <p>Providing wider coverage of health care.</p><br>
-            <div id="overlay_div1">View Department</div>
-        </div>
-        <div>
-            <p><b>Emergency care</b> <br></p> 
-            <p>If you need a doctor urgently outside our opening ours, call our emergency number for emergency service.</p><br>
-            <div id="overlay_div1">View Department</div>
-            
-        </div>
-        <div>
-            <p><b>Online Appointment</b> <br></p>
-            <p>Complete the form to book an appointment with us today.</p><br>
-            <div id="overlay_div1">View Department</div>
-        </div>
-    </div>
+<div id="copyright" class="container-fluid-sm row">
+    <div class="col-sm p-3 text-white">click here to learm more about us</div>
+    <div class="col-sm p-3 text-white">exclusive member of ISHDP</div>
+    <div class="col-sm p-3 text-white">Copyright 2022 by UkwuomaFortune</div>
 </div>
-
+</div>
