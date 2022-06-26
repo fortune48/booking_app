@@ -1,5 +1,7 @@
-<% @appointments.each do |a| %>
-  <%= a.fixed_date %>
-  <%= a.description %>
-  <%= a.users.pluck(:first_name, :last_name).flatten %>
-<% end %>
+<div id="appointment_index">
+  <% @appointments.each do |a| %>
+    <%= a.fixed_date %><br>
+    <%= a.description %><br>
+    <%= a.users.pluck(:first_name, :last_name).flatten %><br><br>
+  <% end %>
+</div>

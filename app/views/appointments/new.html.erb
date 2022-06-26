@@ -1,6 +1,8 @@
-<%= form_for @appointment do |f| %>
-  <%= f.datetime_field :fixed_date %><br>
-  <%= f.text_field :description, type: :text %><br>
-  <%= f.collection_select(:user_ids, User.doctors, :id, :full_name, prompt: true) %><br>
-  <%= f.submit class: "btn btn-primary" %>
-<% end %>
+<div id="appointment_new_form">
+  <%= form_for @appointment do |f| %>
+    <%= f.datetime_field :fixed_date %><br><br>
+    <%= f.text_field :description, type: :text %><br><br>
+    <%= f.collection_select(:user_ids, User.doctors, :id, :full_name, prompt: "Select a Doctor") %><br><br>
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+</div>
