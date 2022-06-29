@@ -1,7 +1,25 @@
-<div id="appointment_index">
+
+<div class="jumbotron bg-primary", id="appointments">
   <% @appointments.each do |a| %>
-    <%= a.fixed_date %><br>
-    <%= a.description %><br>
-    <%= a.users.pluck(:first_name, :last_name).flatten %><br><br>
+    <div style="margin: 20px, width: 50%;">
+    <h1 class="display-4">
+      <%= a.users.pluck(:first_name, :last_name).flatten %><br><br>
+    </h1>
+    <p class="lead">
+      <%= a.description %><br>
+    </p>
+    <p class="lead">
+      <%= a.fixed_date %><br>
+    </p>
+    
+    <div>
+      <%= link_to "Edit", edit_appointment_path(a), class: "btn btn-dark" %>
+      <%= link_to "Back", appointments_path, class: "btn btn-primary" %>
+      <%= button_to "Destroy", appointment_path(a), class: "btn-danger" %>
+    </div>
+    
+    </div>
+    <hr class="my-4">
   <% end %>
-</div>
+    
+  </div>

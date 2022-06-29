@@ -14,8 +14,16 @@ class User < ApplicationRecord
 
   scope :doctors, -> { where(role: "doctor") }
   scope :patients, -> { where(role: "patient") }
-
+  
   def full_name
     "#{first_name} #{last_name}"
   end 
+
+  def active_appointments
+    appointments.where("fixed_date > ? ", DateTime.now)
+  end
+
+  def inactive_appointments
+    appointments.where("fixed_date < ? ", DateTime.now)
+  end
 end

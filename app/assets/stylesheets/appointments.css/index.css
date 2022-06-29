@@ -1,4 +1,10 @@
 #appointment_index {
+  
+}
+
+#appointments {
+  margin-bottom: 20px;  
   width: 50%;
-  margin: 15px;
+  margin: auto;
+  margin-top: 20px;
 }
