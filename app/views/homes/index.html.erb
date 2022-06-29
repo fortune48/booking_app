@@ -2,9 +2,7 @@
 <div class="container-fluid-sm">
 
 <div id="carousel" class="container-fliud-sm bg-secondary">
-<% if current_user %>
-    <p>welcome <%= current_user.first_name %></p>
-<% end %>
+
     <div id="overlay">
     <div id="overlay1" class="container-fliud-sm row">
         <h1>Welcome to our Hospital's appointment booking site</h1><br/>
@@ -13,7 +11,9 @@
         <h3>Making Healthcare Better Together.</h3><br/>
         <p>From our network of medical professionals to our state-of-the-art equipment, we offer only the best laboratory services. With more than 5,000 tests on offer, Our hospital has the largest, most comprehensive test offering in Africa. We are able to support our doctors and our patients in ways not possible before. Together, we are building a stronger healthcare system in Nigeria and you are part of the change.</p>
         <div  id="overlay2_div" class="row">
-            <div id="overlay2_div1" class="col-sm">View Department</div>
+            <div id="overlay2_div1" class="col-sm">
+                <%= link_to "appointments", appointments_path, class: "link" %>
+            </div>
             <div id="overlay2_div2" class="col-sm">
                 <%= link_to "Sign-Up", new_user_registration_path, class: "link" %>
             </div>

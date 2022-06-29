@@ -1,6 +1,19 @@
 class AppointmentsController < ApplicationController
+  before_action :get_appointment, only: [:edit, :update]
+
   def index
     @appointments = Appointment.all
+  end
+
+  def edit 
+  end
+
+  def update 
+    if @appointment.update(appointment_params)
+      redirect_to dashboards_index_path, notice: "Updated Successfully"
+    else
+      redirect_to edit_appointment_path(@appointment), alert: @appointment.errors.messages
+    end
   end
   
   def new
@@ -11,7 +24,8 @@ class AppointmentsController < ApplicationController
     @appointment = current_user.appointments.build(appointment_params)
     if @appointment.save
       @appointment.users << User.find(params["appointment"]["user_ids"])
-      redirect_to new_appointment_path, notice: "Appointment Created Successfully"
+      @appointment.users << current_user
+      redirect_to dashboards_index_path, notice: "Appointment Created Successfully"
     else
       redirect_to new_appointment_path, alert: @appointment.errors.messages
     end
@@ -21,5 +35,9 @@ class AppointmentsController < ApplicationController
 
   def appointment_params
     params.require(:appointment).permit(:fixed_date, :description, :user_id)
+  end
+
+  def get_appointment
+    @appointment = Appointment.find(params[:id])
   end
 end

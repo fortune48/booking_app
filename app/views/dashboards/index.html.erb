@@ -1,0 +1,14 @@
+<% if current_user %>
+    <p>welcome <%= current_user.first_name %></p>
+<% end %>
+<h2>Future Appointments</h2>
+<% @active_appointments.each do |appointment| %>
+  <p>Fixed Date : <%= appointment.fixed_date %><%= link_to 'Edit', edit_appointment_path(appointment) %></p>
+  <p>Description : <%= appointment.description %></p><br>
+<% end %>
+
+<h2>Past Appointments</h2>
+<% @inactive_appointments.each do |appointment| %>
+  <p>Fixed Date : <%= appointment.fixed_date %></p>
+  <p>Description : <%= appointment.description %></p><br>
+<% end %>
