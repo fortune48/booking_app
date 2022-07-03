@@ -1,11 +1,15 @@
 class AppointmentsController < ApplicationController
-  before_action :get_appointment, only: [:edit, :update]
+  before_action :get_appointment, only: [:edit, :update, :show]
 
   def index
     @appointments = Appointment.all
   end
 
   def edit 
+  end
+
+  def show
+
   end
 
   def update 
@@ -29,6 +33,13 @@ class AppointmentsController < ApplicationController
     else
       redirect_to new_appointment_path, alert: @appointment.errors.messages
     end
+  end
+
+  def destroy
+    @appointment = Appointment.find(params[:id])
+    @appointment.destroy
+
+    redirect_to dashboards_index_path, status: :see_other
   end
 
   private
