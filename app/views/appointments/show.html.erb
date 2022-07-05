@@ -1,1 +1,15 @@
-vnfdsgjgbfvnbgd
+
+  <div class="jumbotron bg-primary" id="jumbotron">
+    
+    <p class="lead">
+      <%= @appointment.users.pluck(:first_name, :last_name).flatten %>  
+      <%= @appointment.fixed_date %>    |
+      <%= appointment.description %>    |
+    </p>
+    <hr class="my-4">
+    <div>
+      <%= link_to "Edit", edit_appointment_path(@appointment), class: "btn btn-dark" %>
+      <%= link_to "Back", appointments_path, class: "btn btn-primary" %>
+      <%= link_to "Destroy", appointment_path(@appointment), data: { turbo_method: :delete, turbo_confirm: "Are you sure"}, class: " btn btn-dark" %>
+    </div>
+  </div>

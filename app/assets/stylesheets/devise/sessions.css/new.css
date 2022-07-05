@@ -2,3 +2,10 @@
   width: 50%;
   margin: auto;
 }
+
+@media screen and (max-width: 600px) {
+  #sessions_new {
+    width: 100%;
+  margin: auto;
+  }
+}
