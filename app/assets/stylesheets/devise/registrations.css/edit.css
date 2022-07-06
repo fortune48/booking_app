@@ -2,6 +2,7 @@
   width: 50%;
   margin: auto;
 }
+
 @media screen and (max-width: 600px) {
   #registrations_edit {
     width: 100%;

@@ -1,0 +1,12 @@
+#jumbotron {
+  border-style: solid;
+  background-color: blue;
+}
+
+@media screen and (max-width: 600px) {
+  #jumbotron {
+    border-style: solid;
+    background-color: blue;
+    width: 100%;
+  }
+}

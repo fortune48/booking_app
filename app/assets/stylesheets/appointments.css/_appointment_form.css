@@ -1,0 +1,18 @@
+
+#jumbotron {
+  width: 40%;
+  margin: auto;
+  margin-top: 10px;
+  align-content: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  #jumbotron {
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    align-content: center;
+    justify-content: center;
+  }
+}
