@@ -1,6 +1,6 @@
 #jumbotron {
   border-style: solid;
-  background-color: blue;
+  background-color: brown;
 }
 
 @media screen and (max-width: 600px) {

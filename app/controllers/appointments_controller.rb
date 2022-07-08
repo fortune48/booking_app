@@ -9,7 +9,7 @@ class AppointmentsController < ApplicationController
   end
 
   def show
-
+    @doctor = @appointment.users.where(role: 'doctor').pluck(:first_name, :last_name).flatten.join(' ')
   end
 
   def update 
