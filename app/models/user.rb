@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :age, presence: true, numericality: { greater_than_or_equal_to: 18 }
-  # validates :gender, inclusion: { in: VALID_GENDERS }
+  validates :gender, inclusion: { in: VALID_GENDERS }
 
   scope :doctors, -> { where(role: "doctor") }
   scope :patients, -> { where(role: "patient") }
