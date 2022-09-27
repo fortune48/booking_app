@@ -7,4 +7,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "homes#index"
+  get "homes/health_information"
+  get "homes/emergency_department"
+  get "homes/primary_health_care_department"
+  get "homes/children_ward_department"
+  get "homes/events"
+  get "homes/about_us"
+  get "homes/contact_us"
 end
