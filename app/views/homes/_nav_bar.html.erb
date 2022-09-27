@@ -7,18 +7,18 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto" id="ul">
       <li class="nav-item active">
-        <a class="nav-link text-white" href="#">Health Information</a>
+        <%= link_to "Health Information", homes_health_information_path, class: "nav-link text-white"%>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Departments</a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">First Department</a></li>
-          <li><a class="dropdown-item" href="#">Second Department</a></li>
-          <li><a class="dropdown-item" href="#">Third Department</a></li>
+          <li><%= link_to "Emergency Dept", homes_emergency_department_path, class: "dropdown-item text-dark"%></li>
+          <li><%= link_to "Primary Health Care Dept", homes_primary_health_care_department_path, class: "dropdown-item text-dark"%></li>
+          <li><%= link_to "Children Ward Dept", homes_children_ward_department_path, class: "dropdown-item text-dark"%></li>
         </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">Events</a>
+        <%= link_to "Events", homes_events_path, class: "nav-link text-white"%>
       </li>
       <% if user_signed_in? %>
       <li class="nav-item">
@@ -27,10 +27,10 @@
       <% end %>
       
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">About Us</a>
+        <%= link_to "About Us", homes_about_us_path, class: "nav-link text-white"%>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">Contact Us</a>
+        <%= link_to "Contact Us", homes_contact_us_path, class: "nav-link text-white"%>
       </li>
 
       <% if user_signed_in? %>
